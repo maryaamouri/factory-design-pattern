@@ -16,15 +16,17 @@ namespace RefactoringGuru.DesignPatterns.FactoryMethod.Conceptual
             Console.WriteLine("");
 
             Console.WriteLine("App: Launched with the WebDialog.");
-            ClientCode(new WindowsDialogFactory());
+            ClientCode(new WebDialogFactory());
 
         }
 
         public static void ClientCode(FactoryDialog dialog)
         {
-
-            Console.WriteLine("Client: I'm not aware of the creator's class," +
-                "but it still works.\n" + dialog.CreateButton());
+            // using web
+            IButton myButton = dialog.CreateButton();
+            myButton.Render();
+            // using windows
+            
 
         }
 

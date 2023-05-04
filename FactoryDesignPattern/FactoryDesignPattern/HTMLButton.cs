@@ -4,7 +4,7 @@
     {
         public void Render()
         {
-            Console.WriteLine("Web Button is working..");
+            Console.WriteLine("HTML Button is working..");
         }
     }
 }
